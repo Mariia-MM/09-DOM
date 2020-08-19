@@ -1,8 +1,5 @@
 const box = document.createElement("div");
-box.style.width = `250px`;
-box.style.height = `250px`;
-box.style.display = "flex";
-box.style.flexWrap = "wrap";
+box.className = "box";
 
 const wrapper = document.getElementById("wrapper");
 wrapper.append(box);
@@ -14,8 +11,7 @@ const randomColor = () => {
 const generateBlocks = () => {
   for (let i = 0; i < 25; i++) {
     const b = document.createElement(`div`);
-    b.style.width = `50px`;
-    b.style.height = `50px`;
+    b.className = "block";
     b.style.backgroundColor = randomColor();
     box.append(b);
   }
@@ -24,9 +20,7 @@ const generateBlocks = () => {
 const generateBlockInterval = () => {
   for (let i = 0; i < 25; i++) {
     const b = document.createElement(`div`);
-
-    b.style.width = `50px`;
-    b.style.height = `50px`;
+    b.className = "block";
     setInterval(() => {
       b.style.backgroundColor = randomColor();
     }, 1000);
